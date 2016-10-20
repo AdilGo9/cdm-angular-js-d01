@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Angular</title>
+		<script src="../js/angular.min.js"></script>
+		<script>
+			var myApp = angular.module('adilapp',[]);
+
+			myApp.controller('MainCRTL', function($scope) {
+				$scope.name = 0;
+				$scope.increment = function() {
+					$scope.name++;
+				};
+			});
+		</script>
+	</head>
+	<body ng-app="adilapp">
+		<div ng-controller="MainCRTL">
+			<button ng-click="increment()">Ajout</button>
+			{{name}}
+		</div>
+	</body>
+</html>
