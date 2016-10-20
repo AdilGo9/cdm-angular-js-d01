@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Angular</title>
+		<script src="../js/angular.min.js"></script>
+	</head>
+	<body ng-app>
+		<div>
+			<label>Nom:</label>
+			<input type="text" ng-model="nom">
+			<hr>
+			<h1>{{nom | uppercase}}</h1>
+		</div>
+	</body>
+</html>
