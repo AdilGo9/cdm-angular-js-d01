@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Angular</title>
+		<script src="../js/angular.min.js"></script>
+		<script>
+			var myApp = angular.module('adilapp',[]);
+
+			myApp.controller('MainCRTL', function($scope) {
+				$scope.name = 'Salut!';
+			});
+		</script>
+	</head>
+	<body ng-app="adilapp">
+		<div ng-controller="MainCRTL">
+			{{name}}
+		</div>
+	</body>
+</html>
