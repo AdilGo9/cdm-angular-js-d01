@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Angular</title>
+		<script src="../js/angular.min.js"></script>
+		<script>
+			var myApp = angular.module('adilapp',[]);
+
+			myApp.controller('MainCRTL', function($scope) {
+				$scope.name = "";
+				$scope.$watch("name", function(new_value, old_value) {
+					if (new_value == "Efreitech")
+					{
+						alert("Biim");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body ng-app="adilapp">
+		<div ng-controller="MainCRTL">
+			<input type="text" placeholder="Name" ng-model="name">
+			<p>
+				ENTRY : {{ name }}
+			</p>
+		</div>
+	</body>
+</html>
